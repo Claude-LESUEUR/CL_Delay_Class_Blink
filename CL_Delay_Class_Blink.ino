@@ -4,7 +4,7 @@
 
 // Event sert de clef d'entrée, elle doit rester telle quelle, c'est cette classe 
 // qui normalise la dépendance de Delay
-// Delay et la classe qui execute l'objet hérité de Event le temps indiqué. c'est 
+// Delay est la classe qui execute l'objet hérité de Event le temps indiqué. c'est 
 // dans Delay qu'on injecte notre objet hérité de Event et qui contient le code injecté
 // Blink est la classe "métier", vous pouvez vous en inspirer pour créer un 
 // code qui sera executé par Delay. le nom de classe "Blink" peut être changé.
