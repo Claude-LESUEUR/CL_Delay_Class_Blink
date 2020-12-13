@@ -23,8 +23,8 @@ class Event {
 // tant qu'elle le peut (et on instancie immédiatement l'objet "pause")
 class Delay {
   public:
-    void delay(unsigned long tempo, Event & act) {
-      unsigned long before = millis();
+    void delay(unsigned long const tempo, Event & act) {
+      unsigned long const before = millis();
       do {
         act.doEvent();
       } while ((unsigned long)(millis() - before) < tempo );
@@ -35,10 +35,10 @@ class Delay {
 // l'instance "pause" de la classe Delay. elle contient la dépendance "doEvent()"
 class Blink: public Event {
   private:
-    unsigned long tempo;
+    unsigned long const tempo;
 
   public:
-    Blink(unsigned long tempo_): tempo(tempo_) {
+    Blink(unsigned long const tempo_): tempo(tempo_) {
       // on en profite pour initialiser le mode de la pin de la led embarqué
       pinMode(LED_BUILTIN, OUTPUT);
     }
